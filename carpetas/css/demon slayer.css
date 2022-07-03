@@ -1,0 +1,382 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+        background-color: #242a35;
+        background-image: url("/carpetas/fondos_mangas/demon\ slayer.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+nav{
+    background: rgb(45, 48, 55);
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 70px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+li a.active, li a:hover{
+    color: red;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 1300px) {
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1250px) {
+    nav ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1180px) {
+    nav ul li a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1140px) {
+    nav ul li a{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1080px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2b3a49;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 50;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+
+/*BUSCADOR*/
+
+#ctn-icon-search {
+    margin-top: -905px;
+    margin-left: 40px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ctn-icon-search i {
+    margin-top: 40px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+#ctn-icon-search i:hover {
+    color: black;
+}
+
+
+#ctn-bars-search {
+    position: fixed;
+    margin-top: -25px;
+    top: -100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 20px;
+    transition: all 600ms;
+    z-index: 9;
+}
+
+#ctn-bars-search input {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#box-search {
+    position: fixed;
+    display: block;
+    margin-left: -1px;
+    margin-top: -32px;
+    top: 156px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 930px;
+    max-height: 390px;
+    overflow-y: visible;
+    overflow: hidden;
+    z-index: 200;
+    background-color: rgba(56, 56, 56, 0.9);
+    overflow: hidden;
+    display: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+#box-search li a {
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    width: 930px;
+    height: 130px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+.title_b {
+    margin-top: -85px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.title_japo {
+    font-size: 0px;
+    opacity: 0;
+}
+
+#box-search li a:hover {
+    background: #f3f3f3;
+}
+
+#box-search li a i {
+    margin-right: 10px;
+    color: #777777;
+}
+
+#cover-ctn-search {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin-top: -493px;
+    left: 0%;
+    background-color: rgb(0,0,0,0.5);
+    display: none;
+    z-index: 100;
+}
+
+.img_buscador {
+    width: 70px;
+    height: 110px;
+}
+
+.img_buscador2 {
+    width: 70px;
+    height: 110px;
+}
+
+@media (max-width: 1180px) {
+    #ctn-icon-search {
+        margin-top: -898px;
+        margin-left: 40px;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+
+    }
+
+    #ctn-icon-search i {
+        margin-top: 40px;
+        position: absolute;
+        color: white;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+}
+
+/*Manga des*/
+
+.div-m-n {
+    width: 1010px;
+    height: 100px;
+    margin-top: -480px;
+    margin-left: 270px;
+    background: rgb(45, 48, 55,0.980);
+    border-top-right-radius: 10px;
+}
+
+
+.nombre_m {
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 250px;
+    position: absolute;
+}
+
+.img_m {
+    width: 260px;
+    height: 390px;
+    margin-top: -480px;
+    margin-left: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -15px 5px 40px #000;
+}
+
+.conte_img {
+    margin-top: -14px;
+}
+
+.descripcion {
+    width: 1000px;
+    height: 290px;
+    background-color: rgb(0, 0, 0, 0.980);
+    border-bottom-right-radius: 10px;
+    margin-left: 280px;
+}
+
+.descrip_text {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.autor_text {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.artista_text {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.genero_text {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.volumen_text {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.a_1 {
+    color: rgb(43, 50, 63, 1);
+}
+
+.a_2 {
+    color: rgb(43, 50, 63, 1);
+}
+
+
+/*poner fav*/
+
+.poner_fav {
+    width: 260px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 18px;
+    border-radius: 10px;
+    border: 2px solid rgb(45, 48, 55,0.980);
+    background-color: rgb(0, 0, 0, 0.700);
+}
+
+.text_fav {
+    text-decoration: none;
+}
+
+.fav_text {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 40px;
+    text-decoration: none;
+    display: block;
+}
